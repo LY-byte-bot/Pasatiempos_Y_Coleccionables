@@ -6,13 +6,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 15 abr. 2026, 6:30:23 p. m.
     Author     : Leiston
 */
-
+body{
+    margin: 0px;
+}
 .cabecera{
     background-color: rgb(41, 59, 81);
     font-size: 20px;
     font-family: roboto, sans-serif;
 }
 .introduccion{
+    margin: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 16px;
     font-family: roboto, sans-serif;
 }
