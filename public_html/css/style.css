@@ -6,13 +6,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 15 abr. 2026, 6:30:23 p. m.
     Author     : Leiston
 */
+
+/*diseño para bodys y para narvar (header)*/
 body{
-    margin: 0px;
+    margin: 0;
+    font-family: Roboto, sans-serif;
 }
+
 .cabecera{
     background-color: rgb(41, 59, 81);
-    font-size: 20px;
-    font-family: roboto, sans-serif;
+    color: white;
+}
+
+.anuncio{
+    background-color: rgb(30, 45, 65);
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 15px 30px;
+}
+
+.logo img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: gold;
 }
 .introduccion{
     margin: 200px;
@@ -41,3 +76,71 @@ td {
     vertical-align: middle;
 }
 
+
+
+/*diseño para carruseles*/
+
+
+.carrusel{
+    width: 670px;
+    height: 360px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carrusel input{
+    display: none;
+}
+
+.slides{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: margin-left 0.6s ease;
+}
+
+.slide{
+    width: 670px;
+    height: 360px;
+}
+
+.slide img{
+    width: 670px;
+    height: 360px;
+    object-fit: cover;
+}
+
+#slide1:checked ~ .slides{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .slides{
+    margin-left: -670px;
+}
+
+#slide3:checked ~ .slides{
+    margin-left: -1340px;
+}
+
+.controles{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.controles label{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controles label:hover{
+    background-color: gold;
+}
