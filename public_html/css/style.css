@@ -10,6 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 /*diseño para bodys y para narvar (header)*/
 body{
     margin: 0;
+
     font-family: Roboto, sans-serif;
 }
 
@@ -49,7 +50,7 @@ body{
 .navbar a:hover{
     color: gold;
 }
-.introduccion{
+.contenido{
     margin: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
