@@ -12,6 +12,8 @@ body{
     margin: 0;
 
     font-family: Roboto, sans-serif;
+    
+    background-color: lightgray;
 }
 
 .cabecera{
@@ -144,4 +146,76 @@ td {
 
 .controles label:hover{
     background-color: gold;
+}
+
+
+
+
+/* ========================================================= */
+/* SECCIÓN DE AUTÓGRAFOS (DISEÑO MODERNO CON FLEXBOX) */
+/* ========================================================= */
+
+/* Contenedor general que limita el ancho de la lista de autógrafos */
+.main-container {
+    max-width: 1100px;
+    margin: 50px auto; /* 50px de espacio arriba/abajo y centrado */
+    padding: 0 20px;   /* Colchón de seguridad para los lados */
+}
+
+/* Formato de tarjeta para cada autógrafo */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;        /* Bordes redondeados sutiles */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para dar volumen */
+    padding: 25px;
+    margin-bottom: 35px;        /* Separación entre cada autógrafo */
+    display: flex;              /* Activa Flexbox para alinear imagen y texto */
+    align-items: center;        /* Centra verticalmente la foto y el texto */
+    gap: 40px;                  /* Espacio fijo y ordenado entre la foto y el texto */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto visual cuando el usuario pasa el mouse sobre la tarjeta */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de la foto para que no pierda su proporción */
+.card-img-container {
+    flex-shrink: 0;
+}
+
+.card-img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 6px;         /* Bordes redondeados para las fotos */
+    display: block;
+}
+
+/* Bloque de texto interno */
+.card-text {
+    flex-grow: 1;
+}
+
+/* Título del autógrafo (ej. Autógrafo de Michael Jackson) */
+.card-text h3 {
+    font-size: 22px;
+    margin: 0 0 12px 0;
+    color: rgb(41, 59, 81);     /* Usamos el mismo azul de tu cabecera para unificar */
+    font-weight: bold;
+}
+
+/* Párrafos descriptivos dentro de la tarjeta */
+.card-text p {
+    font-size: 16px;
+    line-height: 1.6;           /* Mayor separación entre líneas para leer mejor */
+    margin: 0 0 10px 0;
+    color: #3b4252;             /* Un gris oscuro elegante en lugar de negro puro */
+}
+
+/* Espacio de separación antes del inicio del footer */
+.footer {
+    margin-top: 60px;
+    padding: 30px 0;
 }

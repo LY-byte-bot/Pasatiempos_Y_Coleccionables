@@ -1,13 +1,12 @@
 <html>
     <head>
-        <title>Autografos</title>
+        <title>Cartas y Tarjetas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="cabecera">
-
             <div class="anuncio">
                 ✨ Descubre las últimas novedades en colecciones y artículos exclusivos
             </div>
@@ -26,74 +25,96 @@
                 <a href="Mangas.html">Mangas</a>
             </nav>
         </header>
-        <div class="Cartas y Tarjetas">
-            <table border="0" align="center" width="70%">
-                <tr>
-                    <td><img src="images/cartas_pokemon.png" width="250"></td>
-                    <td>
-                    <p><strong>Cartas de Pokemón</strong><br>
-                Las tarjetas de Pokémon son objetos coleccionables que combinan entretenimiento, estrategia y
-                valor emocional para millones de personas en todo el mundo. Cada carta representa a un Pokémon
-                con habilidades, estadísticas y diseños únicos, lo que las hace atractivas tanto para jugar como
-                para coleccionar.<br>
-                Su importancia radica en que fomentanvínculo con la franquicia, mientras que su 
-                carácter coleccionable se debe a la variedad,rareza y constante lanzamiento de nuevas ediciones,
-                lo que motiva a los aficionados a buscarlas.
-                           </p>
-                 </td>    
-              </tr>
-              
-              <tr>
-                    <td><img src="images/cartas_tarot.jpg" width="250" height="320"></td>
-                    <td>
-                    <p><strong>Cartas de Tarot</strong><br>
-                Las cartas del tarot tienen valor principalmente simbólico y espiritual, más que material.
-                Para muchas personas, son una herramienta de autoconocimiento y reflexión.<br>
-                Para quienes creen en el tarot, cada mazo tiene “energía” o personalidad propia.
-                Por eso, algunos coleccionan diferentes barajas para distintos tipos de lecturas.
-                 </p>
-                 </td>    
-              </tr>
-              
-              <tr>
-                    <td><img src="images/cromo_messi.jpg"  width="250"></td>
-                    <td>
-              
-                    <p><strong>Tarjeta coleccionable de Messi</strong><br>
-               Un cromo de Lionel Messi puede tener un valor muy variable, desde unos pocos dólares en el caso de cromos comunes hasta miles
-               o incluso más si se trata de ediciones raras, antiguas o en perfecto estado. 
-               <br>
-                Su valor depende sobre todo de la rareza, la condición del cromo, si pertenece a un momento importante
-               (como su debut) y de la enorme popularidad del jugador.
-                           </p>
-                 </td>    
-              </tr>
-              
-              <tr>
-                    <td><img src="images/cromo_ronaldo.jpg" width="250"></td>
-                    <td>
-                    <p><strong>Tarjeta coleccionable de Cristiano Ronaldo</strong><br>
-                Un cromo de Cristiano Ronaldo tiene un fuerte valor sentimental para muchas personas porque representa
-                recuerdos de infancia, momentos de emoción al abrir sobres y la admiración por un jugador que ha marcado 
-                épocas en el fútbol.<br>
-                su valor monetario puede ir desde unos pocos euros en cromos comunes hasta miles en piezas raras y bien conservadas.
-                           </p>
-                 </td>    
-              </tr>
-            </table>
+
+        <!-- CONTENIDO PRINCIPAL: Cambiamos la tabla por el contenedor de tarjetas -->
+        <div class="seccion-cartas main-container">
+            
+            <!-- Artículo 1: Cartas Pokémon -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="images/cartas_pokemon.png" alt="Cartas de Pokémon" class="card-img">
+                </div>
+                <div class="card-text">
+                    <h3>Cartas de Pokémon</h3>
+                    <p>
+                        Las tarjetas de Pokémon son objetos coleccionables que combinan entretenimiento, estrategia y
+                        valor emocional para millones de personas en todo el mundo. Cada carta representa a un Pokémon
+                        con habilidades, estadísticas y diseños únicos, lo que las hace atractivas tanto para jugar como
+                        para coleccionar.
+                    </p>
+                    <p>
+                        Su importancia radica en que fomentan vínculo con la franquicia, mientras que su 
+                        carácter coleccionable se debe a la variedad, rareza y constante lanzamiento de nuevas ediciones,
+                        lo que motiva a los aficionados a buscarlas.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Artículo 2: Cartas de Tarot -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="images/cartas_tarot.jpg" alt="Cartas de Tarot" class="card-img" style="max-height: 320px;">
+                </div>
+                <div class="card-text">
+                    <h3>Cartas de Tarot</h3>
+                    <p>
+                        Las cartas del tarot tienen valor principalmente simbólico y espiritual, más que material.
+                        Para muchas personas, son una herramienta de autoconocimiento y reflexión.
+                    </p>
+                    <p>
+                        Para quienes creen en el tarot, cada mazo tiene “energía” o personalidad propia.
+                        Por eso, algunos coleccionan diferentes barajas para distintos tipos de lecturas.
+                    </p>
+                </div>
+            </article>
+            
+            <!-- Artículo 3: Tarjeta de Messi -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="images/cromo_messi.jpg" alt="Tarjeta coleccionable de Messi" class="card-img">
+                </div>
+                <div class="card-text">
+                    <h3>Tarjeta coleccionable de Messi</h3>
+                    <p>
+                        Un cromo de Lionel Messi puede tener un valor muy variable, desde unos pocos dólares en el caso de cromos comunes hasta miles
+                        o incluso más si se trata de ediciones raras, antiguas o en perfecto estado. 
+                    </p>
+                    <p>
+                        Su valor depende sobre todo de la rareza, la condición del cromo, si pertenece a un momento importante
+                        (como su debut) y de la enorme popularidad del jugador.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Artículo 4: Tarjeta de Cristiano Ronaldo -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="images/cromo_ronaldo.jpg" alt="Tarjeta coleccionable de Cristiano Ronaldo" class="card-img">
+                </div>
+                <div class="card-text">
+                    <h3>Tarjeta coleccionable de Cristiano Ronaldo</h3>
+                    <p>
+                        Un cromo de Cristiano Ronaldo tiene un fuerte valor sentimental para muchas personas porque representa
+                        recuerdos de infancia, momentos de emoción al abrir sobres y la admiración por un jugador que ha marcado 
+                        épocas en el fútbol.
+                    </p>
+                    <p>
+                        Su valor monetario puede ir desde unos pocos euros en cromos comunes hasta miles en piezas raras y bien conservadas.
+                    </p>
+                </div>
+            </article>
+
         </div> 
+
+        <!-- FOOTER UNIFICADO -->
         <div class="footer">
             <table border="0" align="center" width="100%" style="color: white">
                 <tr align="center">
                     <td><img src="images/logo.png" width="140" height="100"></td>
-                    <br>
                 </tr>
-                
-                <br>
                 <tr align="center">
                     <td>Contacto: <strong><a href="formulario-contacto.html" style="color: white">Formulario de contacto</a></strong></td>
                 </tr>
-                
                 <tr align="center">
                     <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
                 </tr>
@@ -104,9 +125,7 @@
                             title="Inline Frame Example"
                             width="300"
                             height="200"
-                            src="https://www.openstreetmap.org/export/embed.html?
-                            bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030
-                            577182769775396%2C51.478569861898606&layer=mapnik">
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
                         </iframe>
                         <br>
                     </td>
@@ -117,7 +136,6 @@
                 <tr align="center" style="font-size: 14px;">
                     <td>© 2026 El Rincón del Coleccionista. Todos los derechos reservados.</td>
                 </tr>
-                
             </table>
         </div>
     </body>
