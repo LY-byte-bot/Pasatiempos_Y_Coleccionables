@@ -484,3 +484,14 @@ td {
 
 }
 
+.video-index{
+    width: 100%;
+    max-width: 900px;
+
+    height: auto;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
