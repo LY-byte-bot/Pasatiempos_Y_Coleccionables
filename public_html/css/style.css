@@ -36,12 +36,27 @@ body{
     padding: 15px 30px;
 }
 
+
+/*diseño y animaciones para logo (rotacion y escala)*/
 .logo img{
     width: 140px;
     height: 100px;
     object-fit: contain;
 }
+.logo img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
 
+.logo img:hover{
+    transform: rotate(-5deg) scale(1.08);
+}
+
+
+
+/*diseño de navbar y animacion de letras del navbar (transicion y desplazamiento)*/
 .navbar a{
     color: white;
     text-decoration: none;
@@ -52,13 +67,56 @@ body{
 .navbar a:hover{
     color: gold;
 }
+
+
+
+.navbar a{
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover{
+    color: gold;
+    transform: translateY(-4px);
+}
+
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.4s ease;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+/*alineacion y fuente del parrafo con animaciones (por deslizamiento)*/
 .contenido{
     margin: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 16px;
-    font-family: roboto, sans-serif;
+    font-family: Roboto, sans-serif;
+    animation: entradaSuave 1s ease forwards;
 }
+
+@keyframes entradaSuave{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .formulario{
     background-color: #99ccff;
     width: 20%;
@@ -69,11 +127,9 @@ p{
     font-size: 16px;
     font-family: roboto, sans-serif;  
 }
-.footer{
-    background-color: rgba(41, 59, 81);
-    font-size: 20px;
-    font-family: roboto, sans-serif;
-}
+
+
+
 td {
     padding: 15px;
     vertical-align: middle;
@@ -81,8 +137,7 @@ td {
 
 
 
-/*diseño para carruseles*/
-
+/*diseño para carruseles y animacion (zoom)*/
 
 .carrusel{
     width: 670px;
@@ -113,6 +168,11 @@ td {
     width: 670px;
     height: 360px;
     object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.slide img:hover{
+    transform: scale(1.08);
 }
 
 #slide1:checked ~ .slides{
@@ -148,6 +208,17 @@ td {
     background-color: gold;
 }
 
+/*animacion para video usando tranforrm y box shadoww*/
+.video video{
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.video video:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
 
 
 
@@ -214,8 +285,28 @@ td {
     color: #3b4252;             /* Un gris oscuro elegante en lugar de negro puro */
 }
 
+
+
+/*diseños para el pie de pagina (footer mas animacion)*/
+
+.footer{
+    background-color: rgb(41, 59, 81);
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    animation: aparecerFooter 1.2s ease;
+}
+
+@keyframes aparecerFooter{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 /* Espacio de separación antes del inicio del footer */
 .footer {
     margin-top: 60px;
     padding: 30px 0;
 }
+
