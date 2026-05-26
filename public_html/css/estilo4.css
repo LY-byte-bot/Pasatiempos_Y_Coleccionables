@@ -1,0 +1,257 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 26 may 2026, 2:28:20 p.m.
+    Author     : jcaba
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/fondo_autografos2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: roboto, sans-serif;
+}
+
+.cabecera{
+    background-color: rgb(41, 59, 81);
+    color: white;
+}
+
+.anuncio{
+    background-color: rgb(30, 45, 65);
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 15px 30px;
+}
+
+
+/*diseño y animaciones para logo (rotacion y escala)*/
+.logo img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+}
+.logo img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover{
+    transform: rotate(-5deg) scale(1.08);
+}
+
+
+
+/*diseño de navbar y animacion de letras del navbar (transicion y desplazamiento)*/
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: gold;
+}
+
+
+
+.navbar a{
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover{
+    color: gold;
+    transform: translateY(-4px);
+}
+
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.4s ease;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+/*alineacion y fuente del parrafo con animaciones (por deslizamiento)*/
+.contenido{
+    margin: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    animation: entradaSuave 1s ease forwards;
+}
+
+@keyframes entradaSuave{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal: Se aplica a ambas secciones para mantener las 2 columnas */
+.contenido-autografos,
+.seccion-cartas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas por fila */
+    gap: 30px;                             
+    padding: 20px;
+}
+
+/* Tarjeta compacta (Fondo blanco ajustado) */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;        
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    padding: 15px;            /* Espaciado reducido para ceñirse a las imágenes */
+    display: flex;              
+    flex-direction: column;   
+    align-items: center;        
+    overflow: hidden;         
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de la imagen */
+.card-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Ajuste de las tarjetas y cromos */
+.card-img {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;            /* Altura fija ideal para cartas coleccionables */
+    object-fit: contain;      /* Mantiene la proporción e impide recortes en las cartas */
+    border-radius: 6px;         
+    display: block;
+}
+
+/* Bloque de texto */
+.card-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título: Siempre se queda visible en la tarjeta */
+.card-text h3 {
+    font-size: 20px;
+    margin: 15px 0 5px 0;    
+    color: rgb(41, 59, 81);     
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Párrafos descriptivos (Efecto ocultar / mostrar) */
+.card-text p {
+    font-size: 14.5px;
+    line-height: 1.5;           
+    color: #3b4252;             
+    text-align: justify;
+    
+    /* Configuración inicial oculto */
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    overflow: hidden;
+    
+    /* AL QUITAR EL MOUSE: Regresa instantáneamente al sitio original (0s de delay) */
+    transition: max-height 0.4s ease-out 0s, 
+                opacity 0.3s ease 0s, 
+                margin 0.3s ease 0s;
+}
+
+/* CUANDO EL USUARIO MANTIENE EL CURSOR ENCIMA */
+.card:hover .card-text p {
+    max-height: 180px;        /* Espacio para albergar los dos párrafos de las cartas */
+    opacity: 1;
+    margin: 10px 0 0 0;       
+    
+    /* AL REVELAR: Espera exactamente 1 segundo (1s) antes de desplegarse */
+    transition: max-height 0.4s ease-in-out 1s, 
+                opacity 0.3s ease 1s, 
+                margin 0.3s ease 1s;
+}
+
+/* Ajuste para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+    .contenido-autografos,
+    .seccion-cartas {
+        grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas móviles */
+    }
+    .card-img {
+        height: 220px; 
+    }
+}
+
+
+
+
+
+
+
+
+.footer{
+    background-color: rgb(41, 59, 81);
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    animation: aparecerFooter 1.2s ease;
+}
+
+@keyframes aparecerFooter{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* Espacio de separación antes del inicio del footer */
+.footer {
+    margin-top: 60px;
+    padding: 30px 0;
+}
+
