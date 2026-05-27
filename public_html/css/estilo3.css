@@ -8,7 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 */
 body{
     margin: 0;
-    padding: 0;
+    padding: 0px 0;
     background-image: url("../images/fondo_autografos.jpg");
     background-size: cover;
     background-attachment: fixed;
