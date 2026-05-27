@@ -13,6 +13,8 @@ body{
     background-size: cover;
     background-attachment: fixed;
     font-family: roboto, sans-serif;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .cabecera{
@@ -238,4 +240,203 @@ body{
 .footer {
     margin-top: 60px;
     padding: 30px 0;
+}
+.animacion-sorpresa {
+    position: fixed;
+    bottom: 15%;            /* Altura en la pantalla (15% desde abajo) */
+    left: -330px;           /* Inicia completamente escondido a la izquierda */
+    width: 300px;           /* Tamaño ideal para que luzca compacto y no tape el contenido */
+    z-index: 9999;          /* Se posiciona por encima de las tarjetas y el fondo */
+    pointer-events: none;   /* Permite que el usuario pueda hacer clic "a través" del GIF sin estorbar */
+    
+    /* Ejecuta la animación 'cruzarPantalla' */
+    /* Dura 9 segundos, avanza de forma constante (linear) y se detiene al final (forwards) */
+    animation: cruzarPantalla 9s linear forwards; 
+}
+
+/* Asegura que la imagen use el 100% del contenedor asignado */
+.animacion-sorpresa img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. Definición de la trayectoria: de izquierda a derecha */
+@keyframes cruzarPantalla {
+    0% {
+        left: -250px;         /* Posición inicial oculta */
+        transform: scaleX(-1); /* Orientación normal */
+    }
+    100% {
+        left: 100vw;          /* Posición final: sale por completo por el extremo derecho (100vw) */
+        transform: scaleX(-1);
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* TABLETS */
+@media screen and (max-width: 992px){
+
+    .navbar{
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .card-text h2,
+    .card-text h3{
+        font-size: 28px;
+    }
+
+    .video-anime,
+    .video-comics{
+        width: 100%;
+    }
+
+}
+
+/* CELULARES */
+@media screen and (max-width: 768px){
+
+    /* NAVBAR */
+
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo img{
+        width: 110px;
+        height: auto;
+    }
+
+    .navbar a{
+        font-size: 16px;
+    }
+
+    /* TITULOS */
+
+    .titulo-manga,
+    .titulo-comic{
+        font-size: 34px;
+    }
+
+    /* CARDS */
+
+    .card{
+        flex-direction: column;
+        text-align: center;
+
+        padding: 18px;
+    }
+
+    .card-img-container{
+        min-width: 100%;
+    }
+
+    .card-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-text p{
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    /* VIDEOS */
+
+    .video-anime,
+    .video-comics{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CARRUSEL */
+
+    .carrusel{
+        width: 100%;
+        height: auto;
+    }
+
+    .slide{
+        width: 100%;
+        height: auto;
+    }
+
+    .slide img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* FORMULARIO */
+
+    .formulario{
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* CONTENIDO GENERAL */
+
+    .contenido{
+        margin: 30px 15px;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media screen and (max-width: 480px){
+
+    .titulo-manga,
+    .titulo-comic{
+        font-size: 28px;
+    }
+
+    .card-text h2,
+    .card-text h3{
+        font-size: 24px;
+    }
+
+    .navbar a{
+        font-size: 15px;
+    }
+
+    .anuncio{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .video-index{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+.video-index{
+    width: 100%;
+    max-width: 900px;
+
+    height: auto;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
