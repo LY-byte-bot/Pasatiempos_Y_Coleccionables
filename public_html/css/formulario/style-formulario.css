@@ -1,0 +1,70 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 26 may. 2026, 21:36:37
+    Author     : leiston
+*/
+
+.formulario{
+    width: min(90%, 500px);
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+
+    animation: entradaFormulario 1s ease;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.formulario:hover{
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+@keyframes entradaFormulario{
+
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+.formulario input,
+.formulario select{
+    width: 90%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border: 2px solid #d6d6d6;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+
+    outline: none;
+
+    background-color: #f8f9fa;
+}
+
+

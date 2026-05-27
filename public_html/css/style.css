@@ -10,9 +10,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 /*diseño para bodys y para narvar (header)*/
 body{
     margin: 0;
-
+    padding: 0;
     font-family: Roboto, sans-serif;
-    
     background-color: lightgray;
 }
 
@@ -117,12 +116,7 @@ body{
 }
 
 
-.formulario{
-    background-color: #99ccff;
-    width: 20%;
-    margin: 0 auto;
-    text-align: center;
-}
+
 p{
     font-size: 16px;
     font-family: roboto, sans-serif;  
@@ -153,22 +147,21 @@ td {
 }
 
 .slides{
-    width: 300%;
-    height: 100%;
     display: flex;
-    transition: margin-left 0.6s ease;
+    width: 100%;
+    transition: transform 0.6s ease;
 }
 
 .slide{
-    width: 670px;
-    height: 360px;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .slide img{
-    width: 670px;
+    width: 100%;
     height: 360px;
     object-fit: cover;
-    transition: transform 0.8s ease;
+    display: block;
 }
 
 .slide img:hover{
@@ -176,15 +169,15 @@ td {
 }
 
 #slide1:checked ~ .slides{
-    margin-left: 0;
+    transform: translateX(0%);
 }
 
 #slide2:checked ~ .slides{
-    margin-left: -670px;
+    transform: translateX(-100%);
 }
 
 #slide3:checked ~ .slides{
-    margin-left: -1340px;
+    transform: translateX(-200%);
 }
 
 .controles{
@@ -223,9 +216,9 @@ td {
 .video-index{
     width: 100%;
     max-width: 900px;
-
+    
     height: auto;
-
+    align-items: center;
     border-radius: 18px;
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -444,6 +437,22 @@ td {
     .contenido{
         margin: 30px 15px;
     }
+    
+    /* CONTENIDO CARRUSEL */
+    .carrusel{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .slide img{
+        height: auto;
+    }
+
+    .controles{
+        bottom: 10px;
+    }
+
 
 }
 
@@ -480,6 +489,7 @@ td {
         width: 100%;
         max-width: 100%;
         height: auto;
+        align-items: center;
     }
 
 }
@@ -487,7 +497,7 @@ td {
 .video-index{
     width: 100%;
     max-width: 900px;
-
+    align-items: center;
     height: auto;
 
     border-radius: 18px;
