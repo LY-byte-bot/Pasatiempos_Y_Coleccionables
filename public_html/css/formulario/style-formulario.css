@@ -28,11 +28,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
                 box-shadow 0.4s ease;
 }
 
+.formulario{
+        width: 90%;
+        padding: 20px;
+}
+
 .formulario:hover{
     transform: translateY(-5px);
 
     box-shadow: 0 18px 45px rgba(0,0,0,0.35);
 }
+
+
 @keyframes entradaFormulario{
 
     from{
