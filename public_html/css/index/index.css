@@ -1,0 +1,148 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 10 jun. 2026, 09:25:30
+    Author     : leiston
+*/
+/*diseño para carruseles y animacion (zoom)*/
+
+.carrusel{
+    width: 670px;
+    height: 360px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carrusel input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.slide{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide img:hover{
+    transform: scale(1.08);
+}
+
+#slide1:checked ~ .slides{
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides{
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides{
+    transform: translateX(-200%);
+}
+
+.controles{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.controles label{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controles label:hover{
+    background-color: gold;
+}
+
+
+.botones-carrusel{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.botones-carrusel button{
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(41, 59, 81);
+    color: white;
+    font-size: 16px;
+}
+
+.botones-carrusel button:hover{
+    background-color: gold;
+    color: black;
+}
+
+#descripcion-carrusel{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/*diseño y corresponsive para video index*/
+.video-index{
+    width: 100%;
+    max-width: 900px;
+    
+    height: auto;
+    align-items: center;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+@media screen and (max-width: 768px){
+
+    
+
+    .carrusel{
+        width: 100%;
+        height: auto;
+    }
+
+    .slide{
+        width: 100%;
+        height: auto;
+    }
+
+    .slide img{
+        width: 100%;
+        height: auto;
+    }
+    
+    /* video */
+    .video-index{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+}
+
