@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 28 jun. 2026, 17:52:08
+    Author     : leiston
+*/
+button{
+    margin: 20px;
+    background: lightgray;
+    border: 0px;
+}
+
+.pregunta p {
+    margin: 5px;
+    font-size: 24px;
+}
+
+.respuesta{
+    margin-top: 5px;
+    margin-bottom: 40px;
+    display: none;
+}
