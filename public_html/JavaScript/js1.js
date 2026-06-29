@@ -2,47 +2,74 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
-// Seleccionamos todos los botones de favoritos
+
+
 const botonesFavoritos = document.querySelectorAll('.btn-favorito');
 
-botonesFavoritos.forEach(boton => {
-    boton.addEventListener('click', function() {
-        // 1. Obtener la información del artículo desde los atributos 'data-'
-        const idArticulo = this.getAttribute('data-id');
-        const tituloArticulo = this.getAttribute('data-titulo');
-        const imgArticulo = this.getAttribute('data-img');
+if (botonesFavoritos.length > 0) {
+    botonesFavoritos.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const idArticulo = this.getAttribute('data-id');
+            const tituloArticulo = this.getAttribute('data-titulo');
+            const imgArticulo = this.getAttribute('data-img');
 
-        // 2. Leer la "canasta" del localStorage. 
-        // CONDICIONAL INICIAL: Si no hay nada, creamos un arreglo vacío []
-        let canastaFavoritos = JSON.parse(localStorage.getItem('misFavoritos'));
-        if (!canastaFavoritos) {
-            canastaFavoritos = [];
-        }
+           // AQUI ESTA EL ARREGLO
+            let canastaFavoritos = JSON.parse(sessionStorage.getItem('misFavoritos')) || [];
 
-        // 3. CONDICIONAL PRINCIPAL: Comprobar si el artículo ya existe en la canasta
-        const yaExiste = canastaFavoritos.find(item => item.id === idArticulo);
+            const yaExiste = canastaFavoritos.find(item => item.id === idArticulo);
 
-        if (yaExiste) {
-            // SI YA EXISTE: Le avisamos al usuario
-            alert("¡Este artículo ya está en tu colección de favoritos!");
-        } else {
-            // SI NO EXISTE (ELSE): Lo agregamos a la canasta
-            canastaFavoritos.push({
-                id: idArticulo,
-                titulo: tituloArticulo,
-                img: imgArticulo
-            });
+            if (yaExiste) {
+                alert("¡Este artículo ya está en tu colección temporal!");
+            } else {
+                canastaFavoritos.push({
+                    id: idArticulo,
+                    titulo: tituloArticulo,
+                    img: imgArticulo
+                });
 
-            // Guardamos la canasta actualizada en el navegador
-            localStorage.setItem('misFavoritos', JSON.stringify(canastaFavoritos));
-            
-            // Efecto visual: Cambiamos el color del botón para confirmar
-            this.style.backgroundColor = "gold";
-            this.style.color = "rgb(41, 59, 81)";
-            this.innerText = "✔️ Guardado";
-            
-            alert("¡Añadido a tus favoritos!");
-        }
+                //  sesión actual
+                sessionStorage.setItem('misFavoritos', JSON.stringify(canastaFavoritos));
+                
+                this.style.backgroundColor = "gold";
+                this.style.color = "rgb(41, 59, 81)";
+                this.innerText = "✔️ Guardado";
+                
+                alert("¡Añadido a tu sesión actual");
+            }
+        });
     });
-});
+}
 
+
+// PARTE 2: MOSTRAR FAVORITOS
+
+
+const contenedorFavoritos = document.getElementById('contenedor-favoritos');
+
+if (contenedorFavoritos) {
+    // CONTENIDO ACTUAL DEL ARREGLO
+    let misFavoritos = JSON.parse(sessionStorage.getItem('misFavoritos')) || [];
+
+    if (misFavoritos.length === 0) {
+        // Mensaje actualizado para reflejar la naturaleza temporal
+        contenedorFavoritos.innerHTML = `
+            <h3 style="color: white; text-align: center; grid-column: 1 / -1; margin-top: 50px;">
+                Aún no tienes curiosidades.
+            </h3>
+        `;
+    } else {
+        misFavoritos.forEach(item => {
+            const tarjetaHTML = `
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="${item.img}" class="card-img" alt="${item.titulo}">
+                    </div>
+                    <div class="card-text">
+                        <h3>${item.titulo}</h3>
+                    </div>
+                </div>
+            `;
+            contenedorFavoritos.innerHTML += tarjetaHTML;
+        });
+    }
+}
