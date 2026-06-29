@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Quiz de Coleccionista</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/quiz-coleccionista/quiz-coleccionista.css">
+    </head>
+        <header class="cabecera">
+
+            <div class="anuncio">
+                <marquee>✨ Descubre las últimas novedades en colecciones y artículos exclusivos</marquee>
+            </div>
+
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+
+                <a href="index.html">Inicio</a>
+                <a href="arcade-rockolas-pinball.html">Arcade, Rockolas y Pinball</a>
+                <a href="antiguedades.html">Antigüedades</a>
+                <a href="Autografos.html">Autógrafos</a>
+                <a href="Cartas_Tarjetas.html">Cartas y Tarjetas</a>
+                <a href="Comics.html">Comics</a>
+                <a href="Mangas.html">Mangas</a>
+                <a href="artistas-80s.html">Figuras Coleccionables de Artistas</a>
+                <a href="favoritos.html">Objetos favoritos</a>
+                <a href="quiz-coleccionista.html">Quiz del Coleccionista</a>
+                <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+            </nav>
+        </header>
+    <body>
+        <div class="contenedor">
+        <h1>Quiz del Coleccionista</h1>
+
+        <form id="quiz">
+
+            <div class="pregunta">
+                <h3>1. ¿Qué significa que un artículo sea de edición limitada?</h3>
+
+                <label><input type="radio" name="p1" value="0"> Que siempre es barato.</label><br>
+
+                <label><input type="radio" name="p1" value="1"> Que se fabricaron pocas unidades.</label><br>
+
+                <label><input type="radio" name="p1" value="0"> Que cualquier persona puede producirlo.</label>
+            </div>
+
+            <div class="pregunta">
+                <h3>2. ¿Qué factor aumenta el valor de un coleccionable?</h3>
+
+                <label><input type="radio" name="p2" value="1"> Su rareza y buen estado.</label><br>
+
+                <label><input type="radio" name="p2" value="0"> Que sea muy pesado.</label><br>
+
+                <label><input type="radio" name="p2" value="0"> Que tenga colores llamativos.</label>
+            </div>
+
+            <div class="pregunta">
+                <h3>3. ¿Cuál de estos es un artículo coleccionable?</h3>
+
+                <label><input type="radio" name="p3" value="0"> Un cuaderno escolar.</label><br>
+
+                <label><input type="radio" name="p3" value="1"> Una figura de acción edición especial.</label><br>
+
+                <label><input type="radio" name="p3" value="0"> Un borrador.</label>
+            </div>
+
+            <div class="pregunta">
+                <h3>4. ¿Por qué es importante conservar un artículo en buen estado?</h3>
+
+                <label><input type="radio" name="p4" value="1"> Porque mantiene su valor.</label><br>
+
+                <label><input type="radio" name="p4" value="0"> Porque ocupa menos espacio.</label><br>
+
+                <label><input type="radio" name="p4" value="0"> Porque cambia de color.</label>
+            </div>
+
+            <div class="pregunta">
+                <h3>5. ¿Qué representa un ranking de productos más vistos?</h3>
+
+                <label><input type="radio" name="p5" value="0"> Los productos más baratos.</label><br>
+
+                <label><input type="radio" name="p5" value="0"> Los productos más antiguos.</label><br>
+
+                <label><input type="radio" name="p5" value="1"> Los productos que recibieron más visitas.</label>
+            </div>
+
+            <button type="button" onclick="calcularResultado()">
+                Ver resultado
+            </button>
+
+        </form>
+
+        <h2 id="resultado"></h2>
+
+    </div>
+
+
+
+      
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="footer">
+            <table border="0" align="center" width="100%" style="color: white">
+                <tr align="center">
+                    <td><img src="images/logo.png" width="140" height="100"></td>
+                </tr>
+                <tr align="center">
+                    <td>Contacto: <strong><a href="formulario-contacto.html" style="color: white">Formulario de contacto</a></strong></td>
+                </tr>
+                <tr align="center">
+                    <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <br>
+                        <iframe id="inlineFrameExample"
+                            title="Inline Frame Example"
+                            width="300"
+                            height="200"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                        </iframe>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><hr width="70%"></td>
+                </tr>
+                <tr align="center" style="font-size: 14px;">
+                    <td>© 2026 El Rincón del Coleccionista. Todos los derechos reservados.</td>
+                </tr>
+            </table>
+        </div>
+        <script src="js/quiz-coleccionista/quiz-coleccionista.js"></script>
+    </body>
+</html>
+

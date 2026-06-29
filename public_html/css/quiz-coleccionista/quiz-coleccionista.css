@@ -6,4 +6,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 28 jun. 2026, 17:52:18
     Author     : leiston
 */
+.contenedor{
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+}
 
+.pregunta{
+    width: 80%;
+    margin: 25px auto;
+}
