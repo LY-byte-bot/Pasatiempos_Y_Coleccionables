@@ -1,10 +1,4 @@
-// =============================================
-//   SCRIPT - Página de Cómics
-// =============================================
 
-// ------------------------------------------
-// 1. BOTONES "LEER MÁS" - Expandir / Contraer
-// ------------------------------------------
 const botones = document.querySelectorAll(".boton-comic");
 
 botones.forEach(function (boton) {
@@ -30,9 +24,8 @@ botones.forEach(function (boton) {
     });
 });
 
-// ------------------------------------------
-// 2. MENSAJE "SIN RESULTADOS"
-// ------------------------------------------
+
+
 const inputBuscar = document.getElementById("buscarComic");
 
 const mensajeVacio = document.createElement("p");
@@ -46,9 +39,8 @@ mensajeVacio.style.display = "none";
 mensajeVacio.style.marginTop = "15px";
 inputBuscar.parentElement.insertAdjacentElement("afterend", mensajeVacio);
 
-// ------------------------------------------
-// 3. BUSCADOR - Filtrar por fila de tabla (<tr>)
-// ------------------------------------------
+
+
 inputBuscar.addEventListener("input", function () {
     const texto = this.value.toLowerCase().trim();
     const comics = document.querySelectorAll(".comic");
