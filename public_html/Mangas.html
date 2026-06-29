@@ -3,37 +3,36 @@
         <title>Mangas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/estilo2.css">
 
-
     </head>
-    
-        <header class="cabecera">
-            <div class="anuncio">
+    <body>
+
+        <div class="cabecera">
+            <table border="0" align="center" width="100%" style="color: white">
+                <br>
+                <tr>
+                    <td colspan="7">
                 <marquee>✨ Descubre las últimas novedades en colecciones y artículos exclusivos</marquee>
-            </div>
+                </td>
+                </tr>
+                <tr align="center">
+                    <td><img src="images/logo.png" width="140" height="100"></td>
+                    <td><a href="index-inicio.html" style="color: white">Inicio</a></td>
+                    <td><a href="arcade_rockolas_pinball.html" style="color: white">Arcade, Rockolas y Pinball</a></td>
+                    <td><a href="antiguedades.html" style="color: white">Antigüedades</a></td>
+                    <td><a href="Autografos.html" style="color: white">Autógrafos</a></td>
+                    <td><a href="Cartas_Tarjetas.html" style="color: white">Cartas y Tarjetas</a></td>
+                    <td><a href="Comics.html" style="color: white">Comics</a></td>
+                    <td><a href="Mangas.html" style="color: white">Mangas</a></td>
+                    <td><a href="Discos.html" style="color: white">Discos Antiguos</a></td>
+                    <td><a href="Pinturas.html" style="color: white">Pinturas Antiguas</a></td>
+                </tr>
+            </table>
+        </div>
 
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Logo">
-                </div>
-
-                <a href="index.html">Inicio</a>
-                <a href="arcade-rockolas-pinball.html">Arcade, Rockolas y Pinball</a>
-                <a href="antiguedades.html">Antigüedades</a>
-                <a href="Autografos.html">Autógrafos</a>
-                <a href="Cartas_Tarjetas.html">Cartas y Tarjetas</a>
-                <a href="Comics.html">Comics</a>
-                <a href="Mangas.html">Mangas</a>
-                <a href="artistas-80s.html">Figuras Coleccionables de Artistas</a>
-                <a href="favoritos.html">Objetos favoritos</a>
-                <a href="quiz-coleccionista.html">Productos más vistos</a>
-                <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
-            </nav>
-        </header>
-<body>
         <br>
 
         <h1 class="titulo-manga">
@@ -42,31 +41,29 @@
 
         <br>
 
+    
         <div align="center">
+            <input type="text" id="buscarManga" placeholder="🔍 Buscar un manga...">
+        </div>
 
+        <br>
+
+        <div align="center">
             <video width="640" height="640" controls>
                 <source src="video/videoplayback (7).mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
             </video>
-
         </div>
 
         <div class="mangas">
-
             <table border="0" align="center" width="75%">
 
                 <tr>
-
                     <td colspan="2">
-
-                        <div class="manga-cuadro">
-
+                        <div class="manga-cuadro manga" data-nombre="Naruto">
                             <img src="images/naruto.jpg" width="250" class="manga-img">
-
                             <div class="texto-manga">
-
                                 <h2>Naruto</h2>
-
                                 <p>
                                     Naruto es uno de los mangas más populares y exitosos de todos los tiempos,
                                     creado por Masashi Kishimoto en 1999.
@@ -90,34 +87,18 @@
                                     y desarrollo de historia,
                                     Naruto se convirtió en un fenómeno mundial del anime y manga.
                                 </p>
-                                
-                                     <button class="btn-favorito" 
-            data-id="rdj-20" 
-            data-titulo="Naruto" 
-            data-img="images/naruto.jpg">
-            ⭐ Agregar a favoritos
-        </button>
-
+                                <button class="boton-manga">Leer más</button>
                             </div>
-
                         </div>
-
                     </td>
-
                 </tr>
 
                 <tr>
-
                     <td colspan="2">
-
-                        <div class="manga-cuadro">
-
+                        <div class="manga-cuadro manga" data-nombre="Dragon Ball">
                             <img src="images/Dragon Ball.PNG" width="250" class="manga-img">
-
                             <div class="texto-manga">
-
                                 <h2>Dragon Ball</h2>
-
                                 <p>
                                     Dragon Ball es un manga creado por Akira Toriyama en 1984
                                     y es considerado una de las obras más influyentes
@@ -144,41 +125,25 @@
                                     figuras coleccionables
                                     y nuevas generaciones de fans.
                                 </p>
-                                
-                                     <button class="btn-favorito" 
-            data-id="rdj-21" 
-            data-titulo="Dragon Ball" 
-            data-img="images/Dragon Ball.PNG">
-            ⭐ Agregar a favoritos
-        </button>
-
+                                <button class="boton-manga">Leer más</button>
                             </div>
-
                         </div>
-
                     </td>
-
                 </tr>
 
                 <tr>
-
                     <td colspan="2">
-
-                        <div class="manga-cuadro">
-
+                        <div class="manga-cuadro manga" data-nombre="One Piece">
                             <img src="images/one piece.PNG" width="250" class="manga-img">
-
                             <div class="texto-manga">
-
                                 <h2>One Piece</h2>
-
                                 <p>
                                     One Piece es un manga creado por Eiichiro Oda en 1997
                                     y actualmente es uno de los mangas más vendidos del mundo.
 
                                     La historia sigue a Monkey D. Luffy,
                                     un joven pirata cuyo sueño es encontrar el legendario tesoro
-                                    conocido como “One Piece”
+                                    conocido como "One Piece"
                                     para convertirse en el Rey de los Piratas.
 
                                     Durante su aventura,
@@ -197,33 +162,18 @@
                                     lealtad
                                     y libertad.
                                 </p>
-                                     <button class="btn-favorito" 
-            data-id="rdj-22" 
-            data-titulo="One Piece" 
-            data-img="images/one piece.PNG">
-            ⭐ Agregar a favoritos
-        </button>
-
+                                <button class="boton-manga">Leer más</button>
                             </div>
-
                         </div>
-
                     </td>
-
                 </tr>
 
                 <tr>
-
                     <td colspan="2">
-
-                        <div class="manga-cuadro">
-
+                        <div class="manga-cuadro manga" data-nombre="Attack on Titan">
                             <img src="images/Attack on Titan.PNG" width="250" class="manga-img">
-
                             <div class="texto-manga">
-
                                 <h2>Attack on Titan</h2>
-
                                 <p>
                                     Attack on Titan es un manga creado por Hajime Isayama en 2009
                                     y es reconocido mundialmente por su historia intensa y oscura.
@@ -248,61 +198,64 @@
                                     Su adaptación al anime
                                     se convirtió en una de las más exitosas y populares de los últimos años.
                                 </p>
-                                     <button class="btn-favorito" 
-            data-id="rdj-23" 
-            data-titulo="Attack on Titan" 
-            data-img="images/Attack on Titan.PNG">
-            ⭐ Agregar a favoritos
-        </button>
-
+                                <button class="boton-manga">Leer más</button>
                             </div>
-
                         </div>
-
                     </td>
-
                 </tr>
 
             </table>
-
         </div>
 
+        <script src="script02.js"></script>
+
+    </body>
 
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="footer">
-            <table border="0" align="center" width="100%" style="color: white">
-                <tr align="center">
-                    <td><img src="images/logo.png" width="140" height="100"></td>
-                </tr>
-                <tr align="center">
-                    <td>Contacto: <strong><a href="formulario-contacto.html" style="color: white">Formulario de contacto</a></strong></td>
-                </tr>
-                <tr align="center">
-                    <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        <br>
-                        <iframe id="inlineFrameExample"
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <table border="0" align="center" width="100%" style="color: white">
+            <tr align="center">
+                <td><img src="images/logo.png" width="140" height="100"></td>
+            <br>
+            </tr>
+
+            <br>
+            <tr align="center">
+                <td>Contacto: <strong><a href="formulario-contacto.html" style="color: white">Formulario de contacto</a></strong></td>
+            </tr>
+
+            <tr align="center">
+                <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <br>
+                    <iframe id="inlineFrameExample"
                             title="Inline Frame Example"
                             width="300"
                             height="200"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-                        </iframe>
-                        <br>
-                    </td>
-                </tr>
-                <tr>
-                    <td><hr width="70%"></td>
-                </tr>
-                <tr align="center" style="font-size: 14px;">
-                    <td>© 2026 El Rincón del Coleccionista. Todos los derechos reservados.</td>
-                </tr>
-            </table>
-            <script src="JavaScript/js1.js"></script>
-    </body>
+                            src="https://www.openstreetmap.org/export/embed.html?
+                            bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030
+                            577182769775396%2C51.478569861898606&layer=mapnik">
+                    </iframe>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td><hr width="70%"></td>
+            </tr>
+            <tr align="center" style="font-size: 14px;">
+                <td>© 2026 El Rincón del Coleccionista. Todos los derechos reservados.</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
 </html>
