@@ -1,33 +1,27 @@
 body{
     margin: 0;
     padding: 0;
-
     background-image: url("../images/animesfondo.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
     font-family: roboto, sans-serif;
 }
-
 p{
     font-size: 16px;
     font-family: roboto, sans-serif;
     line-height: 1.7;
     color: #333;
 }
-
 td{
     padding: 15px;
     vertical-align: middle;
 }
-
 .mangas{
     font-family: roboto, sans-serif;
     margin-top: 30px;
 }
-
 .manga-cuadro{
     background-color: rgba(255,255,255,0.95);
     border-radius: 20px;
@@ -39,56 +33,43 @@ td{
     box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
     transition: 0.4s;
 }
-
 .manga-cuadro:hover{
     transform: scale(1.01);
 }
-
 .texto-manga{
     flex: 1;
-
     animation: textoDerecha 2s ease;
 }
-
 .texto-manga h2{
     color: rgb(41, 59, 81);
     font-size: 35px;
 }
-
 .texto-manga p{
     color: #333;
 }
-
 .manga-img{
     border-radius: 15px;
     transition: 0.4s;
-
     animation: imagenIzquierda 2s ease;
 }
-
 .manga-img:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 20px #555;
 }
-
 .titulo-manga{
     text-align: center;
     font-size: 50px;
     color: white;
     text-shadow: 4px 4px 10px black;
     margin-top: 30px;
-
     animation: moverDerecha 2s ease;
 }
-
 video{
     width: 50%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px black;
-
     animation: videoEntrada 2s ease;
 }
-
 .footer{
     background-color: rgba(41, 59, 81, 1);
     font-size: 20px;
@@ -99,92 +80,112 @@ video{
     padding-bottom: 20px;
 }
 
-@keyframes moverDerecha{
+/* ─── BUSCADOR ──────────────────────────────────── */
+#buscarManga {
+    width: 500px;
+    height: 55px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(41, 59, 81);
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+#buscarManga:focus {
+    border-color: crimson;
+    box-shadow: 0px 0px 15px crimson;
+}
 
+/* ─── BOTÓN ─────────────────────────────────────── */
+.boton-manga {
+    background-color: rgb(41, 59, 81);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.boton-manga:hover {
+    background-color: crimson;
+    transform: scale(1.1);
+}
+
+/* ─── ANIMACIONES ───────────────────────────────── */
+@keyframes moverDerecha{
     from{
         opacity: 0;
         transform: translateX(-500px);
     }
-
     to{
         opacity: 1;
         transform: translateX(0);
     }
-
 }
-
 @keyframes imagenIzquierda{
-
     from{
         opacity: 0;
         transform: translateX(-300px);
     }
-
     to{
         opacity: 1;
         transform: translateX(0);
     }
-
 }
-
 @keyframes textoDerecha{
-
     from{
         opacity: 0;
         transform: translateX(300px);
     }
-
     to{
         opacity: 1;
         transform: translateX(0);
     }
-
 }
-
 @keyframes videoEntrada{
-
     from{
         opacity: 0;
         transform: translateX(500px);
     }
-
     to{
         opacity: 1;
         transform: translateX(0);
     }
-
 }
 
+/* ─── RESPONSIVE ────────────────────────────────── */
 @media(max-width: 768px){
-
     .titulo-manga{
         font-size: 35px;
     }
-
     table{
         width: 100%;
     }
-
     tr{
         display: block;
     }
-
     td{
         display: block;
         text-align: center;
     }
-
     .manga-cuadro{
         flex-direction: column;
         text-align: center;
     }
-
     .manga-img{
         width: 90%;
     }
-
     video{
         width: 90%;
     }
-
+    #buscarManga{
+        width: 85%;
+        font-size: 16px;
+    }
 }
