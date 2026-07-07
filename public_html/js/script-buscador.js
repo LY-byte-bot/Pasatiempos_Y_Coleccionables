@@ -1,4 +1,4 @@
-/*scripts generales (utilizados por varias paginas, antiguedades, arcade, form)*/
+/*scripts generales (utilizados por varias paginas, antiguedades, arcade, artistas80s)*/
 
 
 const buscador = document.getElementById("buscar");
