@@ -458,3 +458,18 @@ body{
     color: rgb(41, 59, 81);
     border-color: gold;
 }
+
+/*diseño buscador*/
+.buscador{
+    text-align:center;
+    margin:30px 0;
+}
+
+#buscar{
+    width:350px;
+    max-width:90%;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #999;
+}

@@ -422,3 +422,19 @@ body{
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+
+
+/*diseño buscador*/
+.buscador{
+    text-align:center;
+    margin:30px 0;
+}
+
+#buscar{
+    width:350px;
+    max-width:90%;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #999;
+}
