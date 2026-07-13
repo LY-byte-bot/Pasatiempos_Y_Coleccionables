@@ -1,209 +1,266 @@
-
 <html>
-    <head>
-        <title>Discos Antiguos</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Discos Antiguos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/estilo5.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/estilo5.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="anuncio">
+        <marquee>
+          ✨ Descubre las últimas novedades en colecciones y artículos
+          exclusivos
+        </marquee>
+      </div>
 
-    </head>
-    <body>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
 
-        <header class="cabecera">
-           <div class="anuncio">
-                <marquee>✨ Descubre las últimas novedades en colecciones y artículos exclusivos</marquee>
+        <a href="index.html">Inicio</a>
+        <a href="arcade-rockolas-pinball.html">Arcade, Rockolas y Pinball</a>
+        <a href="antiguedades.html">Antigüedades</a>
+        <a href="Autografos.html">Autógrafos</a>
+        <a href="Cartas_Tarjetas.html">Cartas y Tarjetas</a>
+        <a href="Comics.html">Comics</a>
+        <a href="Mangas.html">Mangas</a>
+        <a href="Discos.html">Discos</a>
+        <a href="Pinturas.html">Pinturas</a>
+        <a href="artistas-80s.html">Figuras Coleccionables de Artistas</a>
+        <a href="favoritos.html">Objetos favoritos</a>
+        <a href="quiz-coleccionista.html">Quiz del Coleccionista</a>
+        <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+      </nav>
+    </header>
+
+    <br />
+
+    <h1 class="titulo-disco">Discos Legendarios</h1>
+
+    <br />
+
+    <div align="center">
+      <input type="text" id="buscarDisco" placeholder="🔍 Buscar un disco..." />
+    </div>
+
+    <br />
+
+    <div class="discos">
+      <table border="0" align="center" width="75%">
+        <tr>
+          <td colspan="2">
+            <div
+              class="disco-cuadro disco"
+              data-nombre="The Beatles"
+              data-fecha="1969-09-26"
+            >
+              <img
+                src="images/The Beatles - Abbey Road.png"
+                width="250"
+                height="250"
+                class="disco-img"
+                alt="The Beatles - Abbey Road"
+              />
+              <div class="texto-disco">
+                <h2>The Beatles - Abbey Road</h2>
+                <p>
+                  Abbey Road es el undécimo álbum de estudio de The Beatles,
+                  lanzado en 1969 y considerado uno de los mejores discos de la
+                  historia. Fue grabado en los estudios Abbey Road de Londres y
+                  producido por George Martin. El álbum incluye canciones
+                  icónicas como Come Together, Something y Here Comes the Sun.
+                  Su portada, donde los cuatro miembros cruzan un paso de cebra,
+                  es una de las imágenes más reconocidas de la música mundial.
+                  Abbey Road marcó el final de la era de The Beatles y dejó un
+                  legado eterno en la historia del rock.
+                </p>
+                <button class="boton-disco">Leer más</button>
+
+                <button
+                  class="btn-favorito"
+                  data-id="abbeyroad-01"
+                  data-titulo="The Beatles - Abbey Road"
+                  data-img="images/The Beatles - Abbey Road.png"
+                >
+                  ⭐ Agregar a favoritos
+                </button>
+              </div>
             </div>
+          </td>
+        </tr>
 
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Logo">
-                </div>
-                
+        <tr>
+          <td colspan="2">
+            <div
+              class="disco-cuadro disco"
+              data-nombre="Michael Jackson"
+              data-fecha="1982-11-30"
+            >
+              <img
+                src="images/Michael Jackson - Thriller.jpg"
+                width="250"
+                height="250"
+                class="disco-img"
+                alt="Michael Jackson - Thriller"
+              />
+              <div class="texto-disco">
+                <h2>Michael Jackson - Thriller</h2>
+                <p>
+                  Thriller es el sexto álbum de estudio de Michael Jackson,
+                  lanzado en 1982 y es el disco más vendido de la historia con
+                  más de 70 millones de copias. Fue producido por Quincy Jones y
+                  contiene éxitos mundiales como Billie Jean, Beat It y la
+                  canción que le da nombre al álbum. El videoclip de Thriller
+                  revolucionó la industria musical y marcó un antes y un después
+                  en la historia del pop. Este álbum consolidó a Michael Jackson
+                  como el Rey del Pop para siempre.
+                </p>
+                <button class="boton-disco">Leer más</button>
 
-                <a href="index.html">Inicio</a>
-                <a href="arcade-rockolas-pinball.html">Arcade, Rockolas y Pinball</a>
-                <a href="antiguedades.html">Antigüedades</a>
-                <a href="Autografos.html">Autógrafos</a>
-                <a href="Cartas_Tarjetas.html">Cartas y Tarjetas</a>
-                <a href="Comics.html">Comics</a>
-                <a href="Mangas.html">Mangas</a>
-                <a href="Discos.html">Discos</a>
-                <a href="Pinturas.html">Pinturas</a>
-                <a href="artistas-80s.html">Figuras Coleccionables de Artistas</a>
-                <a href="favoritos.html">Objetos favoritos</a>
-                <a href="quiz-coleccionista.html">Quiz del Coleccionista</a>
-                <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
-            </nav>
-        </header>
+                <button
+                  class="btn-favorito"
+                  data-id="thriller-01"
+                  data-titulo="Michael Jackson - Thriller"
+                  data-img="images/Michael Jackson - Thriller.jpg"
+                >
+                  ⭐ Agregar a favoritos
+                </button>
+              </div>
+            </div>
+          </td>
+        </tr>
 
-        <br>
+        <tr>
+          <td colspan="2">
+            <div
+              class="disco-cuadro disco"
+              data-nombre="Elvis Presley"
+              data-fecha="1956-03-23"
+            >
+              <img
+                src="images/Elvis Presley - Elvis Presley.jpg"
+                width="250"
+                height="250"
+                class="disco-img"
+                alt="Elvis Presley - Elvis Presley"
+              />
+              <div class="texto-disco">
+                <h2>Elvis Presley - Elvis Presley</h2>
+                <p>
+                  Elvis Presley es el álbum debut del Rey del Rock and Roll,
+                  lanzado en 1956 por RCA Victor. Este disco revolucionó la
+                  música popular al fusionar el rhythm and blues con la música
+                  country, dando origen a un nuevo sonido que conquistó al
+                  mundo. Incluye canciones que se convirtieron en himnos del
+                  rock como Blue Suede Shoes y Tutti Frutti. Con este álbum,
+                  Elvis Presley inició una carrera legendaria que lo convirtió
+                  en uno de los artistas más influyentes de todos los tiempos.
+                </p>
+                <button class="boton-disco">Leer más</button>
 
-        <h1 class="titulo-disco">
-            Discos Legendarios
-        </h1>
+                <button
+                  class="btn-favorito"
+                  data-id="elvis-01"
+                  data-titulo="Elvis Presley - Elvis Presley"
+                  data-img="images/Elvis Presley - Elvis Presley.jpg"
+                >
+                  ⭐ Agregar a favoritos
+                </button>
+              </div>
+            </div>
+          </td>
+        </tr>
 
-        <br>
+        <tr>
+          <td colspan="2">
+            <div
+              class="disco-cuadro disco"
+              data-nombre="The Rolling Stones"
+              data-fecha="1969-12-05"
+            >
+              <img
+                src="images/The Rolling Stones - Let It Bleed.jpg"
+                width="250"
+                height="250"
+                class="disco-img"
+                alt="The Rolling Stones - Let It Bleed"
+              />
+              <div class="texto-disco">
+                <h2>The Rolling Stones - Let It Bleed</h2>
+                <p>
+                  Let It Bleed es el séptimo álbum de estudio de The Rolling
+                  Stones, lanzado en 1969. Es considerado uno de los mejores
+                  álbumes de rock de la historia y marcó una etapa oscura y
+                  poderosa en la carrera de la banda. Incluye canciones
+                  legendarias como Gimme Shelter, You Can't Always Get What You
+                  Want y Midnight Rambler. Su sonido crudo y apasionado captura
+                  perfectamente el espíritu rebelde del rock and roll de los
+                  años 60.
+                </p>
+                <button class="boton-disco">Leer más</button>
 
-      
-        <div align="center">
-            <input type="text" id="buscarDisco" placeholder="🔍 Buscar un disco...">
-        </div>
-
-        <br>
-
-
-
-        <div class="discos">
-            <table border="0" align="center" width="75%">
-
-            
-                <tr>
-                    <td colspan="2">
-                        <div class="disco-cuadro disco" data-nombre="The Beatles">
-                            <img src="images/The Beatles - Abbey Road.png"
-                                 width="250" height="250" class="disco-img">
-                            <div class="texto-disco">
-                                <h2>The Beatles - Abbey Road</h2>
-                                <p>
-                                    Abbey Road es el undécimo álbum de estudio de The Beatles,
-                                    lanzado en 1969 y considerado uno de los mejores discos de la historia.
-
-                                    Fue grabado en los estudios Abbey Road de Londres
-                                    y producido por George Martin.
-
-                                    El álbum incluye canciones icónicas como Come Together,
-                                    Something y Here Comes the Sun.
-
-                                    Su portada, donde los cuatro miembros cruzan un paso de cebra,
-                                    es una de las imágenes más reconocidas de la música mundial.
-
-                                    Abbey Road marcó el final de la era de The Beatles
-                                    y dejó un legado eterno en la historia del rock.
-                                </p>
-                                <button class="boton-disco">Leer más</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <div class="disco-cuadro disco" data-nombre="Michael Jackson">
-                            <img src="images/Michael Jackson - Thriller.jpg"
-                                 width="250" height="250" class="disco-img">
-                            <div class="texto-disco">
-                                <h2>Michael Jackson - Thriller</h2>
-                                <p>
-                                    Thriller es el sexto álbum de estudio de Michael Jackson,
-                                    lanzado en 1982 y es el disco más vendido de la historia
-                                    con más de 70 millones de copias.
-
-                                    Fue producido por Quincy Jones
-                                    y contiene éxitos mundiales como Billie Jean,
-                                    Beat It y la canción que le da nombre al álbum.
-
-                                    El videoclip de Thriller revolucionó la industria musical
-                                    y marcó un antes y un después en la historia del pop.
-
-                                    Este álbum consolidó a Michael Jackson
-                                    como el Rey del Pop para siempre.
-                                </p>
-                                <button class="boton-disco">Leer más</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <div class="disco-cuadro disco" data-nombre="Elvis Presley">
-                            <img src="images/Elvis Presley - Elvis Presley.jpg"
-                                 width="250" height="250" class="disco-img">
-                            <div class="texto-disco">
-                                <h2>Elvis Presley - Elvis Presley</h2>
-                                <p>
-                                    Elvis Presley es el álbum debut del Rey del Rock and Roll,
-                                    lanzado en 1956 por RCA Victor.
-
-                                    Este disco revolucionó la música popular
-                                    al fusionar el rhythm and blues con la música country,
-                                    dando origen a un nuevo sonido que conquistó al mundo.
-
-                                    Incluye canciones que se convirtieron en himnos del rock
-                                    como Blue Suede Shoes y Tutti Frutti.
-
-                                    Con este álbum, Elvis Presley inició una carrera legendaria
-                                    que lo convirtió en uno de los artistas más influyentes de todos los tiempos.
-                                </p>
-                                <button class="boton-disco">Leer más</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <div class="disco-cuadro disco" data-nombre="The Rolling Stones">
-                            <img src="images/The Rolling Stones - Let It Bleed.jpg"
-                                 width="250" height="250" class="disco-img">
-                            <div class="texto-disco">
-                                <h2>The Rolling Stones - Let It Bleed</h2>
-                                <p>
-                                    Let It Bleed es el séptimo álbum de estudio de The Rolling Stones,
-                                    lanzado en 1969.
-
-                                    Es considerado uno de los mejores álbumes de rock de la historia
-                                    y marcó una etapa oscura y poderosa en la carrera de la banda.
-
-                                    Incluye canciones legendarias como Gimme Shelter,
-                                    You Can't Always Get What You Want y Midnight Rambler.
-
-                                    Su sonido crudo y apasionado captura perfectamente
-                                    el espíritu rebelde del rock and roll de los años 60.
-                                </p>
-                                <button class="boton-disco">Leer más</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-            </table>
-        </div>
-
-        <br><br>
-
-        <div class="footer">
-            <table border="0" align="center" width="100%" style="color: white">
-                <tr align="center">
-                    <td><img src="images/logo.png" width="140" height="100"></td>
-                </tr>
-                <tr align="center">
-                    <td>Contacto: <strong><a href="formulario-contacto.html" style="color: white">Formulario de contacto</a></strong></td>
-                </tr>
-                <tr align="center">
-                    <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
-                </tr>
-                <tr align="center">
-                    <td>
-                        <iframe
-                            width="300"
-                            height="200"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-                        </iframe>
-                    </td>
-                </tr>
-                <tr>
-                    <td><hr width="70%"></td>
-                </tr>
-                <tr align="center">
-                    <td>© 2026 El Rincón del Coleccionista. Todos los derechos reservados.</td>
-                </tr>
-            </table>
-        </div>
-
-        <script src="js/script03.js"></script>
-
-    </body>
+                <button
+                  class="btn-favorito"
+                  data-id="letitbleed-01"
+                  data-titulo="The Rolling Stones - Let It Bleed"
+                  data-img="images/The Rolling Stones - Let It Bleed.jpg"
+                >
+                  ⭐ Agregar a favoritos
+                </button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <div class="footer">
+      <table border="0" align="center" width="100%" style="color: white">
+        <tr align="center">
+          <td>
+            <img src="images/logo.png" width="140" height="100" alt="Logo" />
+          </td>
+        </tr>
+        <tr align="center">
+          <td>
+            Contacto:
+            <strong
+              ><a href="formulario-contacto.html" style="color: white"
+                >Formulario de contacto</a
+              ></strong
+            >
+          </td>
+        </tr>
+        <tr align="center">
+          <td>Dirección: Calle los Palitos 345, Hollywood, Estados Unidos</td>
+        </tr>
+        <tr align="center">
+          <td>
+            <iframe
+              width="300"
+              height="200"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
+              title="Mapa"
+            >
+            </iframe>
+          </td>
+        </tr>
+        <tr>
+          <td><hr width="70%" /></td>
+        </tr>
+        <tr align="center">
+          <td>
+            © 2026 El Rincón del Coleccionista. Todos los derechos reservados.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="js/script03.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/js1.js"></script>
+  </body>
 </html>
