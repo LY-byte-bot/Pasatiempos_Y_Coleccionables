@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de la colección</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/gestion-coleccion.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <header class="cabecera">
+            <div class="anuncio">✨ Administra y analiza tu colección</div>
+            <nav class="navbar">
+                <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+                <a href="index.html">Inicio</a>
+                <a href="arcade-rockolas-pinball.html">Arcade, Rockolas y Pinball</a>
+                <a href="antiguedades.html">Antigüedades</a>
+                <a href="Autografos.html">Autógrafos</a>
+                <a href="Cartas_Tarjetas.html">Cartas y Tarjetas</a>
+                <a href="Comics.html">Comics</a>
+                <a href="Mangas.html">Mangas</a>
+                <a href="Discos.html">Discos</a>
+                <a href="Pinturas.html">Pinturas</a>
+                <a href="artistas-80s.html">Figuras Coleccionables de Artistas</a>
+                <a href="favoritos.html">Objetos favoritos</a>
+                <a href="gestion-coleccion.html" aria-current="page">Gestionar colección</a>
+                <a href="quiz-coleccionista.html">Quiz del Coleccionista</a>
+                <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+            </nav>
+        </header>
+
+        <main class="gestion">
+            <section class="presentacion-gestion">
+                <h1>Gestión de la colección</h1>
+                <p>Registra, busca, edita, elimina y ordena tus objetos coleccionables. Los datos son temporales y se eliminan al cerrar la sesión del navegador.</p>
+            </section>
+
+            <section class="panel-formulario">
+                <h2 id="titulo-formulario">Registrar coleccionable</h2>
+                <form id="formulario-coleccionable">
+                    <input type="hidden" id="id-coleccionable">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" maxlength="60" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option>Cómics</option>
+                            <option>Mangas</option>
+                            <option>Discos</option>
+                            <option>Pinturas</option>
+                            <option>Antigüedades</option>
+                            <option>Autógrafos</option>
+                            <option>Cartas y tarjetas</option>
+                            <option>Arcade</option>
+                            <option>Figuras</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="precio">Precio unitario (S/)</label>
+                        <input type="number" id="precio" min="0.01" step="0.01" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <select id="estado" required>
+                            <option value="">Selecciona un estado</option>
+                            <option>Nuevo</option>
+                            <option>Usado</option>
+                            <option>Restaurado</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" min="1" step="1" required>
+                    </div>
+
+                    <div class="acciones-formulario">
+                        <button type="submit" class="boton-primario" id="boton-guardar">Agregar</button>
+                        <button type="button" class="boton-secundario" id="boton-cancelar" hidden>Cancelar edición</button>
+                    </div>
+                </form>
+                <p id="mensaje-formulario" class="mensaje" role="status" aria-live="polite"></p>
+            </section>
+
+            <section class="estadisticas" aria-label="Resumen de la colección">
+                <article><span id="total-registros">0</span><strong>Registros</strong></article>
+                <article><span id="total-unidades">0</span><strong>Unidades</strong></article>
+                <article><span id="valor-total">S/ 0.00</span><strong>Valor total</strong></article>
+                <article><span id="precio-promedio">S/ 0.00</span><strong>Precio promedio</strong></article>
+                <article><span id="objeto-caro">—</span><strong>Mayor precio</strong></article>
+                <article><span id="categoria-frecuente">—</span><strong>Categoría principal</strong></article>
+            </section>
+
+            <section class="panel-listado">
+                <div class="barra-herramientas">
+                    <div class="campo">
+                        <label for="busqueda">Buscar</label>
+                        <input type="search" id="busqueda" placeholder="Nombre, categoría, estado o ID">
+                    </div>
+                    <div class="campo">
+                        <label for="criterio-orden">Ordenar por</label>
+                        <select id="criterio-orden">
+                            <option value="id">ID</option>
+                            <option value="nombre-asc">Nombre A–Z</option>
+                            <option value="nombre-desc">Nombre Z–A</option>
+                            <option value="precio-asc">Precio: menor a mayor</option>
+                            <option value="precio-desc">Precio: mayor a menor</option>
+                            <option value="cantidad-desc">Mayor cantidad</option>
+                            <option value="categoria">Categoría</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-gestion">
+                        <thead>
+                            <tr>
+                                <th>ID</th><th>Nombre</th><th>Categoría</th><th>Precio</th>
+                                <th>Estado</th><th>Cantidad</th><th>Subtotal</th><th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-coleccionables"></tbody>
+                    </table>
+                </div>
+                <p id="sin-resultados" class="sin-resultados" hidden>No se encontraron coleccionables.</p>
+            </section>
+
+            <section class="panel-matriz">
+                <h2>Matriz de unidades por categoría y estado</h2>
+                <p>Esta tabla se genera desde un arreglo bidimensional y se actualiza con cada operación.</p>
+                <div class="tabla-contenedor">
+                    <table class="tabla-gestion">
+                        <thead><tr><th>Categoría</th><th>Nuevo</th><th>Usado</th><th>Restaurado</th><th>Total</th></tr></thead>
+                        <tbody id="cuerpo-matriz"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer"><p>© 2026 El Rincón del Coleccionista.</p></footer>
+        <script src="js/gestion-coleccion.js"></script>
+        <script src="js/responsive.js"></script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+    --azul: rgb(41, 59, 81);
+    --azul-oscuro: rgb(30, 45, 65);
+    --dorado: #e0ad00;
+    --rojo: #b3261e;
+}
+
+.gestion {
+    width: min(1200px, 94%);
+    margin: 35px auto 60px;
+}
+
+.presentacion-gestion { text-align: center; margin-bottom: 28px; }
+.presentacion-gestion h1 { color: var(--azul); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 8px; }
+
+.panel-formulario,
+.panel-listado,
+.panel-matriz {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 24px rgba(30, 45, 65, 0.13);
+}
+
+.panel-formulario h2, .panel-matriz h2 { color: var(--azul); margin-top: 0; }
+
+#formulario-coleccionable {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(140px, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { color: var(--azul-oscuro); font-weight: bold; }
+.campo input, .campo select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #9ca7b3;
+    border-radius: 7px;
+    background: white;
+    font: inherit;
+}
+.campo input:focus, .campo select:focus { outline: 3px solid rgba(224, 173, 0, .3); border-color: var(--dorado); }
+
+.acciones-formulario { grid-column: 1 / -1; display: flex; gap: 10px; }
+.boton-primario, .boton-secundario, .boton-editar, .boton-eliminar {
+    border: 0; border-radius: 6px; padding: 10px 14px; color: white; font-weight: bold; cursor: pointer;
+}
+.boton-primario { background: var(--azul); }
+.boton-secundario { background: #68737d; }
+.boton-editar { background: #1769aa; }
+.boton-eliminar { background: var(--rojo); }
+.boton-primario:hover, .boton-editar:hover { background: var(--azul-oscuro); }
+.boton-eliminar:hover { background: #851c17; }
+
+.mensaje { min-height: 22px; margin-bottom: 0; font-weight: bold; color: #146c2e; }
+.mensaje.error { color: var(--rojo); }
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-bottom: 25px;
+}
+.estadisticas article {
+    min-height: 95px; padding: 16px; border-radius: 12px; background: var(--azul); color: white;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.estadisticas span { color: #ffd740; font-size: 1.25rem; font-weight: bold; margin-bottom: 7px; overflow-wrap: anywhere; }
+
+.barra-herramientas { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; margin-bottom: 20px; }
+.tabla-contenedor { overflow-x: auto; }
+.tabla-gestion { width: 100%; border-collapse: collapse; min-width: 760px; }
+.tabla-gestion th, .tabla-gestion td { padding: 11px; border-bottom: 1px solid #d5dbe1; text-align: left; }
+.tabla-gestion th { background: var(--azul); color: white; }
+.tabla-gestion tbody tr:nth-child(even) { background: #f3f6f8; }
+.acciones-tabla { display: flex; gap: 7px; }
+.sin-resultados { text-align: center; color: #5b6570; font-weight: bold; }
+.footer { background: var(--azul-oscuro); color: white; text-align: center; padding: 25px; }
+
+@media (max-width: 1000px) {
+    #formulario-coleccionable { grid-template-columns: repeat(2, 1fr); }
+    .estadisticas { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+    #formulario-coleccionable, .barra-herramientas { grid-template-columns: 1fr; }
+    .estadisticas { grid-template-columns: repeat(2, 1fr); }
+    .panel-formulario, .panel-listado, .panel-matriz { padding: 16px; }
+}
