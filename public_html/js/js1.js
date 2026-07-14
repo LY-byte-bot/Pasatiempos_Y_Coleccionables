@@ -47,17 +47,20 @@ if (botonesFavoritos.length > 0) {
 const contenedorFavoritos = document.getElementById('contenedor-favoritos');
 
 if (contenedorFavoritos) {
-    // CONTENIDO ACTUAL DEL ARREGLO
-    let misFavoritos = JSON.parse(sessionStorage.getItem('misFavoritos')) || [];
+    function mostrarFavoritos() {
+        // CONTENIDO ACTUAL DEL ARREGLO
+        const misFavoritos = JSON.parse(sessionStorage.getItem('misFavoritos')) || [];
+        contenedorFavoritos.innerHTML = "";
 
-    if (misFavoritos.length === 0) {
-        // Mensaje actualizado para reflejar la naturaleza temporal
-        contenedorFavoritos.innerHTML = `
-            <h3 style="color: white; text-align: center; grid-column: 1 / -1; margin-top: 50px;">
-                Aún no tienes curiosidades.
-            </h3>
-        `;
-    } else {
+        if (misFavoritos.length === 0) {
+            contenedorFavoritos.innerHTML = `
+                <h3 style="color: white; text-align: center; grid-column: 1 / -1; margin-top: 50px;">
+                    Aún no tienes curiosidades.
+                </h3>
+            `;
+            return;
+        }
+
         misFavoritos.forEach(item => {
             const tarjetaHTML = `
                 <div class="card">
@@ -66,10 +69,34 @@ if (contenedorFavoritos) {
                     </div>
                     <div class="card-text">
                         <h3>${item.titulo}</h3>
+                        <button type="button" class="btn-eliminar-favorito" data-id="${item.id}">
+                            Eliminar de favoritos
+                        </button>
                     </div>
                 </div>
             `;
             contenedorFavoritos.innerHTML += tarjetaHTML;
         });
     }
+
+    contenedorFavoritos.addEventListener('click', function (evento) {
+        const botonEliminar = evento.target.closest('.btn-eliminar-favorito');
+
+        if (!botonEliminar) {
+            return;
+        }
+
+        const deseaEliminar = confirm('¿Estás seguro de que deseas eliminar este objeto de favoritos?');
+
+        if (deseaEliminar) {
+            const idArticulo = botonEliminar.getAttribute('data-id');
+            const misFavoritos = JSON.parse(sessionStorage.getItem('misFavoritos')) || [];
+            const favoritosActualizados = misFavoritos.filter(item => item.id !== idArticulo);
+
+            sessionStorage.setItem('misFavoritos', JSON.stringify(favoritosActualizados));
+            mostrarFavoritos();
+        }
+    });
+
+    mostrarFavoritos();
 }
