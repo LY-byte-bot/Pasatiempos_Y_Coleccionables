@@ -78,7 +78,7 @@ if (contenedorFavoritos) {
             contenedorFavoritos.innerHTML += tarjetaHTML;
         });
     }
-
+//correción del contenedor favoritos
     contenedorFavoritos.addEventListener('click', function (evento) {
         const botonEliminar = evento.target.closest('.btn-eliminar-favorito');
 
